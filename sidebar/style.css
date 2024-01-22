@@ -49,17 +49,18 @@ nav.active {
   background-color: #3b48d3;
 }
 
-.nav-brand a {
-  display: none;
+.nav-brand .nav-logo {
+  display: block;
   font-weight: 700;
   font-size: 20px;
   color: white;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transform: translateY(-150%);
+  transition: all 0.3s ease, transform 0.5s ease;
 }
 
-nav.active .nav-brand a {
-  display: block;
+nav.active .nav-brand .nav-logo {
+  transform: translateY(0%);
 }
 
 .nav-brand i {
@@ -96,6 +97,7 @@ nav.active .nav-brand a {
   align-items: center;
   position: relative;
   transition: all 0.3s ease;
+  transform-origin: left;
 }
 
 .nav-items a,
@@ -105,14 +107,15 @@ i {
 }
 
 .nav-items a {
-  display: none;
+  display: block;
   font-size: 20px;
   font-weight: 500;
-  transition: all 0.3s ease;
+  transform: translateX(-250%);
+  transition: transform 0.5s ease;
 }
 
 nav.active .nav-items a {
-  display: block;
+  transform: translateX(5%);
 }
 
 .nav-items i {
